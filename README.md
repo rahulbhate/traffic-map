@@ -4,7 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Instructions to Run Projects
 1.  git clone repo
 2.  npm install
-3.  create .env.local file in root directory and paste your own GOOGLE MAPS API KEY
+3.  create .env.local file in root directory and paste your own GOOGLE MAPS API KEY 
+Example: REACT_APP_GOOGLE_KEY = "YOUR OWN API KEY"
 4. npm start
 ## Available Scripts
 
