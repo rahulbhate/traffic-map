@@ -19,12 +19,7 @@ export default function IncidentsList({ incidentCart, ...props }) {
     }
 
     return (
-      <div
-        style={{
-          maxHeight: "100vh" /* Fix a max-height here */,
-          overflow: "auto"
-        }}
-      >
+      <div className='contents'>
         {totalCount}
         {content}
       </div>

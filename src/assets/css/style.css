@@ -22,6 +22,11 @@
   margin: auto;
   -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
+.contents {
+  max-height: 100vh;
+  overflow: auto;
+}
+
 span {
   color: blue;
   font-weight: bold;
@@ -31,7 +36,8 @@ span {
     grid-template-columns: 1fr;
     height: 100vh;
   }
-  .card {
-    display: none;
+
+  .contents {
+    height: 120px;
   }
 }
