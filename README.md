@@ -1,7 +1,11 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+## Run Project
+1.  git clone repo
+2.  npm install
+3.  create .env.local file in root directory and paste your own GOOGLE MAPS API KEY
+4. npm start
 ## Available Scripts
 
 In the project directory, you can run:
