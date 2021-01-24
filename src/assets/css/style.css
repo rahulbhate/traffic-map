@@ -36,7 +36,6 @@ span {
     grid-template-columns: 1fr;
     height: 100vh;
   }
-
   .contents {
     height: 120px;
   }
