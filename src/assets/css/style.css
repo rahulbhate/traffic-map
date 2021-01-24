@@ -4,23 +4,28 @@
 .App {
   text-align: center;
   width: 100vw;
-  height: 70vh;
+  height: 100vh;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(1, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: 20% 80% 1fr;
 }
 .card {
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
   border-radius: 16px;
   padding-bottom: 7px;
-  height: 10em;
+  height: 5em;
   width: 24em;
   margin: auto;
   -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
-
+span {
+  color: blue;
+  font-weight: bold;
+}
 @media (max-width: 768px) {
   .App {
     grid-template-columns: 1fr;
+    height: 100vh;
   }
 }

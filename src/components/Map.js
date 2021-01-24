@@ -7,27 +7,10 @@ import {
   withScriptjs
 } from "react-google-maps";
 import * as incidentsData from "../data/incidents.json";
-import IncidentsList from "./IncidentsList";
-function Map(props) {
+function Map({ ...props }) {
   const [selectedIncident, SetSelectedIncident] = useState(null);
-  const [incidentCart, setIncidentsCart] = useState([]);
-  const [alert, setAlert] = useState("");
   const [show, setShow] = useState(false);
-  const handleIncidentsList = item => {
-    let addIncident = true;
-    for (let i = 0; i < incidentCart.length; i++) {
-      if (incidentCart[i].id === item.id) {
-        addIncident = false;
-      }
-    }
-    if (addIncident) {
-      setIncidentsCart([...incidentCart, item]);
-    } else {
-      setAlert("Already in your list");
-    }
 
-    console.log(incidentCart);
-  };
   useEffect(() => {
     const listener = e => {
       if (e.key === "Escape") {
@@ -55,7 +38,7 @@ function Map(props) {
           }}
           onClick={() => {
             SetSelectedIncident(incident);
-            handleIncidentsList(incident);
+            props.handleClick(incident);
           }}
         />
       ))}
@@ -75,33 +58,28 @@ function Map(props) {
             {show ? (
               <>
                 <p>{selectedIncident.description}</p>
-                <a
+                <span
                   onClick={() => {
                     setShow(false);
                   }}
                 >
                   Close
-                </a>
+                </span>
               </>
             ) : (
-              <a
+              <span
                 onClick={() => {
                   setShow(true);
                 }}
               >
                 Read More
-              </a>
+              </span>
             )}
           </div>
         </InfoWindow>
       )}
     </GoogleMap>
   );
-  return (
-    <>
-      {googleMap}
-      <IncidentsList incidentCart={incidentCart} />
-    </>
-  );
+  return <>{googleMap}</>;
 }
 export default withScriptjs(withGoogleMap(Map));
