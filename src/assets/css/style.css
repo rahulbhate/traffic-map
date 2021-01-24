@@ -14,8 +14,11 @@
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
   border-radius: 16px;
   padding-bottom: 7px;
-  height: 5em;
-  width: 24em;
+  margin: auto;
+  text-align: center;
+  line-height: 2em;
+  height: 8em;
+  overflow: auto;
   margin: auto;
   -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
@@ -27,5 +30,8 @@ span {
   .App {
     grid-template-columns: 1fr;
     height: 100vh;
+  }
+  .card {
+    /* display: none; */
   }
 }

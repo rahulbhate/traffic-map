@@ -25,9 +25,9 @@ function App() {
       <IncidentsList incidentCart={incidentCart} />
       <Map
         googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
-        loadingElement={<div />}
-        containerElement={<div style={{ height: `100%` }} />}
-        mapElement={<div style={{ height: `100%` }} />}
+        loadingElement={<div style={{ minHeight: `100vh` }} />}
+        containerElement={<div style={{ minHeight: `100vh` }} />}
+        mapElement={<div style={{ minHeight: `100vh` }} />}
         handleClick={handleClick}
       />
     </div>

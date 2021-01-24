@@ -26,7 +26,7 @@ function Map({ ...props }) {
 
   const googleMap = (
     <GoogleMap
-      defaultZoom={8}
+      defaultZoom={10}
       defaultCenter={{ lat: -37.813629, lng: 144.963058 }}
     >
       {incidentsData.incidents.map(incident => (
