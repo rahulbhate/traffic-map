@@ -8,10 +8,11 @@ import {
 } from "react-google-maps";
 import * as incidentsData from "../data/incidents.json";
 import IncidentsList from "./IncidentsList";
-function Map() {
+function Map(props) {
   const [selectedIncident, SetSelectedIncident] = useState(null);
   const [incidentCart, setIncidentsCart] = useState([]);
   const [alert, setAlert] = useState("");
+  const [show, setShow] = useState(false);
   const handleIncidentsList = item => {
     let addIncident = true;
     for (let i = 0; i < incidentCart.length; i++) {
@@ -68,10 +69,29 @@ function Map() {
             SetSelectedIncident(null);
           }}
         >
-          <div>
+          <div style={{ width: "150px" }}>
             <h3>{selectedIncident.incident_type}</h3>
             <h4>{selectedIncident.title}</h4>
-            <p>{selectedIncident.description}</p>
+            {show ? (
+              <>
+                <p>{selectedIncident.description}</p>
+                <a
+                  onClick={() => {
+                    setShow(false);
+                  }}
+                >
+                  Close
+                </a>
+              </>
+            ) : (
+              <a
+                onClick={() => {
+                  setShow(true);
+                }}
+              >
+                Read More
+              </a>
+            )}
           </div>
         </InfoWindow>
       )}
