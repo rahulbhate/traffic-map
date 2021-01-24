@@ -2,8 +2,10 @@ import React from "react";
 
 export default function IncidentsList({ incidentCart, ...props }) {
   let content;
+  let totalCount;
   {
     if (incidentCart && incidentCart.length > 0) {
+      totalCount = `List (${incidentCart.length}) `;
       content = incidentCart.map(i => {
         return (
           <div key={i.id} className='card'>
@@ -16,6 +18,11 @@ export default function IncidentsList({ incidentCart, ...props }) {
       return (content = "No Data In The List");
     }
 
-    return <div>{content}</div>;
+    return (
+      <div>
+        {totalCount}
+        {content}
+      </div>
+    );
   }
 }
