@@ -5,16 +5,16 @@
   text-align: center;
   width: 100vw;
   height: 70vh;
-  /* display: grid; */
+  display: grid;
   align-items: center;
-  /*    grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(1, 1fr);
 }
 .card {
   box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
   border-radius: 16px;
   padding-bottom: 7px;
-  height: 15em;
-  width: 14em;
+  height: 10em;
+  width: 24em;
   margin: auto;
   -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
