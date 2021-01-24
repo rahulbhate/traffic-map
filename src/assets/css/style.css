@@ -32,6 +32,6 @@ span {
     height: 100vh;
   }
   .card {
-    /* display: none; */
+    display: none;
   }
 }
